@@ -1,10 +1,10 @@
 #ifndef LIBFT_H	
-int		ft_isalpha(int c);
 #define LIBFT_H
 
+int		ft_isalpha(int c);
 int		ft_isdigit(int c);
-int		isalnum(int c);
-int 	isascii(int c);
+int		ft_isalnum(int c);
+/*int 	isascii(int c);
 int		isprint(int c);
 int		strlen(const char *str);
 void	*memset(void *str, int c, int n);
@@ -24,5 +24,5 @@ char 	strnstr (const char *big, const char *little, int len);
 int		atoi(const char *str);
 void	*calloc(int nitems, int size);
 char	*strdup( const char *str1 );
-
+*/
 #endif

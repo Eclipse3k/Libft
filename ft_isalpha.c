@@ -1,5 +1,7 @@
 #include "libft.h"
 
+// ? Working perfectly
+
 int		ft_isalpha(int c)
 {
 	if (c <= 'z' && c >= 'a')
