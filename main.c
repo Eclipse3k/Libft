@@ -1,11 +1,10 @@
 #include "libft.h"
 #include <stdio.h>
+#include <ctype.h>
 
 int main()
 {
-	char c = 'A';
-	char d = '3'; 
+	char a[] = {"hola ada"};
 
-	printf("%d\n", ft_isalpha(c));
-	printf("%d\n", ft_isalpha(d));
+	printf("%d\n", ft_strlen(a));
 }
