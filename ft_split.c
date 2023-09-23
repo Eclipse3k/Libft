@@ -50,9 +50,8 @@ char		**ft_split(char const *s, char c)
 		return (NULL);
 	size = ft_count_words(s, c);
 	word_split = (char **)malloc((size + 1) *sizeof(char *));
-	if (!word_split)
+	if (word_split == NULL)
 		return (NULL);
 	ft_allocate(word_split, s, c);
 	return (word_split);
-
 }

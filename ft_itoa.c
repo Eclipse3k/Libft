@@ -31,7 +31,7 @@ char	*ft_itoa(int n)
 	string = (char *)malloc(sizeof(char) * (length + 1));
 	if (string == NULL)
 		return (NULL);
-	if (number < 0)
+	if (n < 0)
 	{
 		string[0] = '-';
 		number = -n;
@@ -48,14 +48,4 @@ char	*ft_itoa(int n)
 		length--;
 	}
 	return (string);
-
 }
-
-int main()
-{
-	int n = 0;
-	char *c;
-	c = ft_itoa(n);
-	printf("%s", c);
-}
-

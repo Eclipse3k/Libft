@@ -2,28 +2,19 @@
 
 // ? Working perfectly
 
-void    ft_memmove(void *dest, const void *src, size_t n)
+void    *ft_memmove(void *dst, const void *src, size_t n)
 {
-    unsigned char   *d;
-    unsigned const char   *s;
+	char *tmp;
+	char *dest;
 
-    d = dest;
-    s = src;
-    if ((d < s + n) && s < d)
-    { 
-        d += n;
-        s += n;
-        while (n--)
-        {
-            *(--d) = *(--s);
-        }
-    
-    }
-    else 
-    {
-        while (n--)
-        {
-            *d++ = *s++;
-        }
-    }
+	tmp = (char *)src;
+	dest = (char *)dst;
+	if (tmp < dest)
+	{
+		while (n--)
+			dest[n] = tmp[n];
+	}
+	else
+		ft_memcpy(dest, tmp, n);
+	return (dst);
 }

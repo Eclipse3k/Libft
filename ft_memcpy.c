@@ -2,15 +2,17 @@
 
 // ? Working perfectly
 
-void    *ft_memcpy(void *dest, const void *src, size_t n)
+void    *ft_memcpy(void *dst, const void *sc, size_t n)
 {
-    unsigned char *d;
-    unsigned const char *s;
+    size_t i;
 
-    d = dest;
-    s = src;
-    while (n--)
-    {
-        *d++ = *s++;
-    }
+	if (!dst && !sc)
+		return (0);
+	i = 0;
+	while (i < n)
+	{
+		((unsigned char *)dst)[i] = ((unsigned char *)sc)[i];
+		i++;
+	}
+	return (dst);
 }

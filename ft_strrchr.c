@@ -6,12 +6,12 @@ char	*ft_strrchr(const char *s, int c)
 	int	i;
 
 	i = ft_strlen(s);
-	s += i - 1;
+	s += i;
 	while (i-- && c != *s)
 	{
 		s--;
 	}
 	if (*s == c)
-		return (s);
+		return ((char *)s);
 	return (0);
 }
