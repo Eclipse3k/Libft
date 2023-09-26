@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_split.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: josanch2 <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/09/26 17:32:41 by josanch2          #+#    #+#             */
+/*   Updated: 2023/09/26 19:32:12 by josanch2         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 static int	ft_count_words(char const *s, char sep)
@@ -17,6 +29,7 @@ static int	ft_count_words(char const *s, char sep)
 	return (word_count);
 }
 // * Mirar para modificar esto a mi gusto
+
 static void	ft_allocate(char **tab, char const *s, char sep)
 {
 	char		**tab_ptr;
@@ -41,7 +54,7 @@ static void	ft_allocate(char **tab, char const *s, char sep)
 	*tab_ptr = NULL;
 }
 
-char		**ft_split(char const *s, char c)
+char	**ft_split(char const *s, char c)
 {
 	char	**word_split;
 	int		size;
@@ -49,7 +62,7 @@ char		**ft_split(char const *s, char c)
 	if (!s)
 		return (NULL);
 	size = ft_count_words(s, c);
-	word_split = (char **)malloc((size + 1) *sizeof(char *));
+	word_split = (char **)malloc((size + 1) * sizeof(char *));
 	if (word_split == NULL)
 		return (NULL);
 	ft_allocate(word_split, s, c);
